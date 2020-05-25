@@ -27,10 +27,6 @@ public class AddtoWishlist extends BaseClass {
 		login.verifyBeforeLogin();
 		browse.browseproducts();
 		browse.addtowishlist();
-		wish.searchWishlist("BACK MAXI");
-		
-		
+		wish.searchWishlist("BACK MAXI");	
 	}
-	
-	
 }
