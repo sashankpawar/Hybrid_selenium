@@ -43,8 +43,8 @@ public class NaukriLoginPage {
 	public void loginnaukri()
 	{
 		Helper.waitForWebElementAndClick(driver, Loginlink, "click on login first");
-		Helper.waitForWebElementAndType(driver, Username, "sashankpawar39@gmail.com", "Enter username");
-		Helper.waitForWebElementAndType(driver, Password, "Oracle@4485", "Enter password");
+		Helper.waitForWebElementAndType(driver, Username, "xyz", "Enter username");
+		Helper.waitForWebElementAndType(driver, Password, "abcd", "Enter password");
 	//	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Helper.waitForWebElementAndClick(driver, Loginbutton, "click on login button");
 	}
@@ -53,7 +53,7 @@ public class NaukriLoginPage {
 	{
 		Helper.waitForWebElementAndClick(driver, Upload , "Click on upload CV button");
 		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-		Runtime.getRuntime().exec("C:\\Users\\ADMIN\\photon-workspace\\HybridFramework\\Autoit\\upload.exe");
+		Runtime.getRuntime().exec("\\HybridFramework\\Autoit\\upload.exe");
 	}
 	
 	
