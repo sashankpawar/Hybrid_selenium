@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="53363" started-at="2020-04-03T02:49:32Z" finished-at="2020-04-03T02:50:25Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="53363" started-at="2020-04-03T02:49:32Z" finished-at="2020-04-03T02:50:25Z">
+      <class name="testcases.RunTestSeleniumGrid2">
+        <test-method status="PASS" signature="executeTest()[pri:0, instance:testcases.RunTestSeleniumGrid2@39aeed2f]" name="executeTest" duration-ms="53323" started-at="2020-04-03T08:19:32Z" finished-at="2020-04-03T08:20:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executeTest -->
+      </class> <!-- testcases.RunTestSeleniumGrid2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

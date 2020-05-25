@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="none">
+  <test name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="testcases.CreateUserTest">
+        <methods>
+          <include name="addResultToReport"/>
+          <include name="setupReport"/>
+          <include name="clearBrowserSession"/>
+          <include name="startBrowserSession"/>
+          <include name="createUser"/>
+        </methods>
+      </class> <!-- testcases.CreateUserTest -->
+      <class name="testcases.SmokeTest">
+        <methods>
+          <include name="addResultToReport"/>
+          <include name="clearBrowserSession"/>
+          <include name="startBrowserSession"/>
+        </methods>
+      </class> <!-- testcases.SmokeTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
