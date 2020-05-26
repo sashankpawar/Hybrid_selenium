@@ -43,7 +43,8 @@ public class BaseClass {
 	{
 		System.out.println("LOG:INFO : Setting up Report");
 		
-		reportPath=System.getProperty("user.dir")+"\\Reports\\Report"+Helper.getCurrentDateTime()+".html";
+	//	reportPath=System.getProperty("user.dir")+"\\Reports\\Report"+Helper.getCurrentDateTime()+".html";
+		reportPath=System.getProperty("user.dir")+"\\Reports\\Report.html";
 		
 		ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter(reportPath);
 		
