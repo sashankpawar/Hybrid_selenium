@@ -1,2 +1,2 @@
 # Hybrid_selenium
-This is a solid project for selenium webdriver java.
+This is a project for selenium webdriver java.
