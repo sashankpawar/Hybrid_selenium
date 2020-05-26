@@ -9,7 +9,8 @@ import demoshopqapages.WishList;
 import factory.DataProviderFactory;
 import pages.BaseClass;
 
-public class AddtoWishlist extends BaseClass {
+public class AddtoWishlist extends BaseClass 
+{
 	DemoShopLogin login;
 	DemoShopBrowse browse;
 	WishList wish;
@@ -27,6 +28,6 @@ public class AddtoWishlist extends BaseClass {
 		login.verifyBeforeLogin();
 		browse.browseproducts();
 		browse.addtowishlist();
-		wish.searchWishlist("BACK MAXI");	
+		wish.searchWishlist(DataProviderFactory.getExcel().getCellData("Demoshop", 15, 5));	
 	}
 }
