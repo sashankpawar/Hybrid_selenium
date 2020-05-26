@@ -18,7 +18,7 @@ public class ClearButton extends BaseClass{
 	@Test
 	public void ClearbuttonApply()
 	{
-		logger=report.createTest("Add to Wishlist");
+		logger=report.createTest("Clear Button");
 		login=PageFactory.initElements(driver, DemoShopLogin.class);
 		browse=PageFactory.initElements(driver, DemoShopBrowse.class);
 		product=PageFactory.initElements(driver, ProductDetails.class);
@@ -26,7 +26,7 @@ public class ClearButton extends BaseClass{
 		login.loginToApplication(DataProviderFactory.getExcel().getCellData("Admin", 4,0),DataProviderFactory.getExcel().getCellData("Admin", 4,1));
 		login.verifyBeforeLogin();
 		browse.browseproducts();	
-		product.Openproduct("BACK MAXI");
+		product.Openproduct(DataProviderFactory.getExcel().getCellData("Demoshop", 36, 5));
 		product.cleardropdown();
 	}
 }

@@ -28,7 +28,7 @@ public class SaleProducts extends BaseClass{
 	@Test
 	public void SaleProd()
 	{
-		logger=report.createTest("Browse the products");
+		logger=report.createTest("Browse the sale products");
 		
 		browse=PageFactory.initElements(driver,DemoShopBrowse.class );
 		login=PageFactory.initElements(driver, DemoShopLogin.class);
@@ -40,8 +40,8 @@ public class SaleProducts extends BaseClass{
 		login.verifyAfterLogin();
 		browse.browseproducts();
 		System.out.println("Sale PRod test");
-		browse.Buysaledress(DataProviderFactory.getExcel().getCellData(1, 3, 4));			
-		prod=product.addtocart(DataProviderFactory.getExcel().getCellData(1,6,4),DataProviderFactory.getExcel().getCellData(1,4,4), DataProviderFactory.getExcel().getCellData(1,5,4));
+		browse.Buysaledress(DataProviderFactory.getExcel().getCellData(1, 3, 5));			
+		prod=product.addtocart(DataProviderFactory.getExcel().getCellData(1,6,5),DataProviderFactory.getExcel().getCellData(1,4,5), DataProviderFactory.getExcel().getCellData(1,5,5));
 		cartt.searchcart(prod);
 	}
 

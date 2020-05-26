@@ -17,7 +17,7 @@ public class RemoveFromWishlist extends BaseClass {
 	@Test
 	public void removefromwish()
 	{
-		logger=report.createTest("Add to Wishlist");
+		logger=report.createTest("Remove from Wishlist");
 		login=PageFactory.initElements(driver, DemoShopLogin.class);
 		browse=PageFactory.initElements(driver, DemoShopBrowse.class);
 		wish=PageFactory.initElements(driver, WishList.class);
@@ -26,7 +26,7 @@ public class RemoveFromWishlist extends BaseClass {
 		login.verifyBeforeLogin();
 		browse.browseproducts();
 		browse.addtowishlist();
-		wish.searchWishlist("BACK MAXI");
+		wish.searchWishlist(DataProviderFactory.getExcel().getCellData("Demoshop", 18, 5));
 		wish.removefromwishlist();
 		wish.verifyRemoveWishlist();
 		

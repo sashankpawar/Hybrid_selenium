@@ -19,7 +19,7 @@ public class ShareFacebook extends BaseClass{
 	@Test
 	public void Facebook()
 	{
-		logger=report.createTest("Add to Wishlist");
+		logger=report.createTest("Share Icon Facebook");
 		login=PageFactory.initElements(driver, DemoShopLogin.class);
 		browse=PageFactory.initElements(driver, DemoShopBrowse.class);
 		product=PageFactory.initElements(driver, ProductDetails.class);
@@ -27,7 +27,7 @@ public class ShareFacebook extends BaseClass{
 		login.loginToApplication(DataProviderFactory.getExcel().getCellData("Admin", 4,0),DataProviderFactory.getExcel().getCellData("Admin", 4,1));
 		login.verifyBeforeLogin();
 		browse.browseproducts();	
-		product.Openproduct("BACK MAXI");
+		product.Openproduct(DataProviderFactory.getExcel().getCellData("Demoshop", 28, 5));
 		product.Facebookshare();
 	}
 }

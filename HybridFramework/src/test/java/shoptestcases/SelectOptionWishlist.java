@@ -19,7 +19,7 @@ public class SelectOptionWishlist extends BaseClass {
 	@Test
 	public void selectoption()
 	{
-		logger=report.createTest("Add to Wishlist");
+		logger=report.createTest("Select Option Wishlist");
 		login=PageFactory.initElements(driver, DemoShopLogin.class);
 		browse=PageFactory.initElements(driver, DemoShopBrowse.class);
 		wish=PageFactory.initElements(driver, WishList.class);
@@ -29,7 +29,7 @@ public class SelectOptionWishlist extends BaseClass {
 		login.verifyBeforeLogin();
 		browse.browseproducts();
 		browse.addtowishlist();
-		wish.searchWishlist("BACK MAXI");
+		wish.searchWishlist(DataProviderFactory.getExcel().getCellData("Demoshop", 24, 5));
 		wish.selectoptionwish();
 		product.VerifyProductDetailsPage();
 		
