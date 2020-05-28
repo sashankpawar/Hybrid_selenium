@@ -28,6 +28,7 @@ public class AddtoWishlist extends BaseClass
 		login.verifyBeforeLogin();
 		browse.browseproducts();
 		browse.addtowishlist();
+		
 		wish.searchWishlist(DataProviderFactory.getExcel().getCellData("Demoshop", 15, 5));	
 	}
 }
