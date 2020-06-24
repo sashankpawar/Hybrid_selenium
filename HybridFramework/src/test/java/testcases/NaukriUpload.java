@@ -41,8 +41,8 @@ public class NaukriUpload extends BaseClass{
 	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	driver.findElement(By.cssSelector("#wdgt-file-upload")).click();
 	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		Runtime.getRuntime().exec("C:\\Users\\ADMIN\\photon-workspace\\HybridFramework\\Autoit\\upload.exe");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	Runtime.getRuntime().exec("C:\\Users\\ADMIN\\photon-workspace\\HybridFramework\\Autoit\\upload.exe");
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 }

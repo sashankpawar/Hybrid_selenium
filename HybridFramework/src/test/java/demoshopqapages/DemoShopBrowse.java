@@ -30,8 +30,10 @@ public class DemoShopBrowse {
 	By downloads=By.linkText("Downloads");
 	By browse=By.xpath("//a[contains(text(),'Browse products')]");
 //	By buysale=By.xpath("//span[contains(text(),'Sale')]//parent::div//child::h3//child::a");
+	
 	@FindBy(xpath="//span[contains(text(),'Sale')]//parent::div//child::h3//child::a")
 	List<WebElement> buysale;
+	
 	By producttitle=By.xpath("//div[@class='noo-product-inner']//a");
 	By wishlist=By.xpath("//a[@data-product-id='1162']");
 	

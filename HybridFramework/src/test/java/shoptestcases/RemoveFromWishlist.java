@@ -2,7 +2,6 @@ package shoptestcases;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import demoshopqapages.DemoShopBrowse;
 import demoshopqapages.DemoShopLogin;
 import demoshopqapages.WishList;

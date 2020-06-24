@@ -11,7 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
-//import org.testng.annotations.Parameters;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -23,7 +23,7 @@ import factory.DataProviderFactory;
 import utlity.Helper;
 
 /**
- * @author USER
+ * @author Sashank Pawar
  * Logs
  * Reports
  * Attaching screenshot on failure
@@ -43,8 +43,8 @@ public class BaseClass {
 	{
 		System.out.println("LOG:INFO : Setting up Report");
 		
-	//	reportPath=System.getProperty("user.dir")+"\\Reports\\Report"+Helper.getCurrentDateTime()+".html";
-		reportPath=System.getProperty("user.dir")+"\\Reports\\Report.html";
+		reportPath=System.getProperty("user.dir")+"\\Reports\\Report"+Helper.getCurrentDateTime()+".html";
+	//	reportPath=System.getProperty("user.dir")+"\\Reports\\Report.html";
 		
 		ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter(reportPath);
 		
@@ -59,12 +59,13 @@ public class BaseClass {
 	}
 	
 //	@Parameters({"browser","appurl"})
+	@Parameters({"browser"})
 	@BeforeClass
-	public void startBrowserSession()
+	public void startBrowserSession(String browser)
 	{
 		System.out.println("LOG:INFO : Setting up browser session");
-		driver=new BrowserFactory().startBrowser(DataProviderFactory.getConfig().getBrowser(),DataProviderFactory.getConfig().stagingURL());
-	//	driver=new BrowserFactory().startBrowser(browser,url);
+	//	driver=new BrowserFactory().startBrowser(DataProviderFactory.getConfig().getBrowser(),DataProviderFactory.getConfig().stagingURL());
+		driver=new BrowserFactory().startBrowser(browser,DataProviderFactory.getConfig().stagingURL());
 
 		//System.out.println("Driver value "+driver);
 	}

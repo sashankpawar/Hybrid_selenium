@@ -238,7 +238,7 @@ public class Helper {
 			  || httpurlconnection.getResponseCode()==301
 			  || httpurlconnection.getResponseCode()==302)
 			{
-				
+				System.out.println(url+" - "+httpurlconnection.getResponseMessage());
 			}
 			else
 			{
