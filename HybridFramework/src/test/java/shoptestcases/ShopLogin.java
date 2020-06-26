@@ -17,16 +17,16 @@ public class ShopLogin extends BaseClass{
 	
 	
 	
-	@Test(dataProvider="shopdata")
-//	@Test
+//	@Test(dataProvider="shopdata")
+	@Test
 	public void shoplogin(String username,String password )
 {
 	logger=report.createTest("Login to shop.demoqa");
 	login=PageFactory.initElements(driver, DemoShopLogin.class);
 	login.verifyBeforeLogin();
-	login.loginToApplication(username,password);
-//	login.loginToApplication(DataProviderFactory.getExcel().getCellData("Admin", 4,0),DataProviderFactory.getExcel().getCellData("Admin", 4,1));
-//	login.verifyAfterLogin();
+//	login.loginToApplication(username,password);
+	login.loginToApplication(DataProviderFactory.getExcel().getCellData("Admin", 4,0),DataProviderFactory.getExcel().getCellData("Admin", 4,1));
+	login.verifyAfterLogin();
 }
 	
 	
