@@ -25,21 +25,24 @@ public class DemoShopLogin {
 	By unameAfterlogin=By.xpath("//strong[1]");
 	By MyaccountLink=By.linkText("My Account");
 	By dismiss=By.linkText("Dismiss");
+	By Logout = By.linkText("Log out");
 	
 	public void verifyBeforeLogin() {
 		
 		Assert.assertTrue(driver.getTitle().contains("ToolsQA"));
+		Helper.waitForWebElementAndClick(driver, dismiss, "Click on dismiss");
 	}
 
 	public void loginToApplication(String uname, String pass) {
 		
-		Helper.waitForWebElementAndClick(driver, dismiss, "Click on dismiss");
+	//	Helper.waitForWebElementAndClick(driver, dismiss, "Click on dismiss");
 		Helper.waitForWebElementAndClick(driver, MyaccountLink, "Click on My Account link");
 		Helper.waitForWebElementAndType(driver, usernameId, uname, "Enter username");
 		
 		Helper.waitForWebElementAndType(driver, passwordId, pass, "Enter password");
 		
 		Helper.waitForWebElementAndClick(driver, loginButton, "Click on Login button");
+		Helper.waitForWebElementAndClickUsingJS(driver, Logout, "logout");
 		
 	}
 
