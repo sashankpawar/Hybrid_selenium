@@ -6,7 +6,8 @@
   <test  name="ChromeTest" >
   <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="shoptestcases.ShopLogin"/>     
+      <class name="shoptestcases.ClearButton"/>
+      <class name="shoptestcases.AddtoWishlist"/>    
   <!-- <class name="shoptestcases.SaleProducts"/>         --> 
           </classes>
   </test> <!-- Test -->
