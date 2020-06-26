@@ -19,7 +19,7 @@ public class ShopLogin extends BaseClass{
 	
 //	@Test(dataProvider="shopdata")
 	@Test
-	public void shoplogin(String username,String password )
+	public void shoplogin()
 {
 	logger=report.createTest("Login to shop.demoqa");
 	login=PageFactory.initElements(driver, DemoShopLogin.class);

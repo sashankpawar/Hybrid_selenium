@@ -130,7 +130,7 @@ public class Helper {
 	
 	public static WebElement waitForWebElementAndClick(WebDriver driver,By locator,String stepInfo)
 	{
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, 60);
 		WebElement element=wait.until(ExpectedConditions.elementToBeClickable(locator));
 		highLightElement(driver, element);
 		element.click();
